@@ -1,367 +1,77 @@
-/* === Base === */
-body {
-  margin: 0;
-  font-family: 'Lato', sans-serif;
-  background-color: #D6F0FA;
-  color: #111111;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* === Navbar Revamp === */
-.navbar {
-  background-color: #0C0931;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1400px;
-  margin: auto;
-}
-
-.nav-title {
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-.nav-links a {
-  color: white;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #00CFE5;
-}
-
-/* === Hero Section Refined === */
-.hero {
-  background: linear-gradient(135deg,
-    #0C0931 0%,
-    #1D1856 25%,
-    #C200DB 50%,
-    #00CFE5 100%);
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  background-size: 300% 300%;
-  animation: gradient-shift 15s ease infinite;
-
-  /* ↓↓↓ KEY CHANGES ↓↓↓ */
-  gap: 3rem;
-  padding: 1rem 5% 2rem;    /* reduced top padding */
-  margin-top: 0;
-  min-height: 65vh;         /* slightly shorter overall */
-}
-
-
-
-.hero-left img {
-  width: 340px; /* increased size */
-  height: 340px;
-  border-radius: 50%;
-  border: 6px solid #00CFE5;
-  object-fit: cover;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-/* === Hero Section (Home + About) === */
-.hero,
-.about-hero,
-.research-hero {
-  height: 100vh;
-  background: linear-gradient(135deg,
-    #0C0931 0%,
-    #1D1856 25%,
-    #C200DB 50%,
-    #00CFE5 100%);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-size: 300% 300%;
-  animation: gradient-shift 15s ease infinite;
-  padding: 2rem;
-}
-
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.hero .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-}
-
-.hero h1,
-.about-hero h1,
-.research-hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-.hero p,
-.about-hero p,
-.research-hero p {
-  font-size: 1.2rem;
-  color: #f0f0f0;
-  margin-bottom: 1.5rem;
-}
-
-.cta-btn {
-  background-color: #E80074;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.cta-btn:hover {
-  background-color: #00CFE5;
-  color: #0C0931;
-}
-
-/* === Main Content Section === */
-.content {
-  padding: 4rem 2rem;
-  background-color: #f8f8f8;
-  min-height: 60vh;
-  text-align: center;
-}
-.intro {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-}
-.intro h2 {
-  color: #0C0931;
-  margin-bottom: 1rem;
-}
-
-/* === About Page: Profile Card === */
-.profile-card {
-  max-width: 900px;
-  margin: 3rem auto;
-  background: white;
-  border-radius: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.08);
-  align-items: center;
-}
-.profile-card img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #00CFE5;
-  transition: transform 0.3s ease;
-}
-.profile-card img:hover {
-  transform: scale(1.05);
-}
-.profile-card h2 {
-  color: #0C0931;
-  margin-bottom: 0.5rem;
-}
-
-/* === Timeline Section === */
-.timeline-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-}
-.timeline-section h2 {
-  text-align: center;
-  color: #0C0931;
-  margin-bottom: 1rem;
-}
-.timeline {
-  list-style: none;
-  padding-left: 1rem;
-}
-.timeline li {
-  background: #D6F0FA;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-left: 6px solid #00CFE5;
-  border-radius: 6px;
-  font-weight: 500;
-}
-
-/* === Research Page: Cards === */
-.research-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-.research-cards .card {
-  background-color: white;
-  border-left: 6px solid #00CFE5;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.research-cards .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-.research-cards h3 {
-  color: #0C0931;
-  margin-bottom: 0.5rem;
-}
-.research-cards p {
-  color: #333;
-}
-
-/* === Footer === */
-footer {
-  background-color: #013849;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-/* Hero Split Layout */
-.split-hero {
-  flex-direction: row;
-  gap: 4rem;
-  padding: 4rem 6%;
-  flex-wrap: wrap;
-}
-
-.hero-left {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero-left img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 6px solid #00CFE5;
-  object-fit: cover;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-.hero-left img:hover {
-  transform: scale(1.05);
-}
-
-.hero-right {
-  flex: 2;
-  text-align: left;
-  color: white;
-}
-.hero-right h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-.hero-right h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #D6F0FA;
-}
-.hero-right p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.cta-btn {
-  background-color: #00CFE5;
-  color: #0C0931;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.cta-btn:hover {
-  background-color: #013849;
-  color: white;
-}
-
-.about-section {
+/* Hero Fade Section */
+.about-hero-fade {
   background: linear-gradient(135deg, #C200DB, #00CFE5);
   color: white;
+  padding: 5rem 2rem;
   text-align: center;
-  padding: 4rem 2rem 2rem;
+  animation: gradient-shift 15s ease infinite;
+  transition: opacity 1s ease;
 }
-.about-section h1 {
+.about-hero-fade h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
-.about-section p {
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.8;
-  font-size: 1.1rem;
+.about-hero-fade p {
+  font-size: 1.2rem;
 }
 
-.education-section {
-  background-color: #f8f8f8;
-  padding: 3rem 2rem;
-  max-width: 1000px;
-  margin: auto;
+.fade-out {
+  opacity: 0;
 }
-.education-section h2 {
+
+/* Hidden until fade completes */
+.hidden {
+  display: none;
+}
+
+/* About Section */
+.about-main-content {
+  padding: 2rem;
+}
+.about-section {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Techy Timeline Style */
+.timeline-tech {
+  max-width: 900px;
+  margin: 3rem auto;
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline-tech h2 {
   text-align: center;
   color: #0C0931;
   margin-bottom: 2rem;
 }
-.education-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-.education-section li {
-  background: white;
-  border-left: 6px solid #00CFE5;
-  margin-bottom: 2rem;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.06);
-}
-.education-section li ul {
+.edu-line {
+  position: relative;
+  border-left: 3px solid #00CFE5;
   padding-left: 1.5rem;
-  list-style-type: disc;
 }
-
+.edu-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #00CFE5;
+  border-radius: 50%;
+  margin-left: -22px;
+  position: relative;
+  top: 12px;
+}
+.edu-card {
+  background: linear-gradient(145deg, #f0faff, #e0f7ff);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+}
+.edu-card h3 {
+  margin-top: 0;
+  color: #0C0931;
+}
+.edu-card p, .edu-card li {
+  color: #333;
+}
