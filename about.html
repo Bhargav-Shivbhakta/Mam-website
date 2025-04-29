@@ -22,47 +22,62 @@
     </div>
   </nav>
 
-  <!-- === ABOUT SECTION === -->
-  <section class="about-section">
-    <h1>About</h1>
-    <p>
-      Dr. Parul Jadhav is an Associate Professor in the School of Electronics and Communication at MIT WPU.
-      She has over <strong>29 years</strong> of experience in teaching, learning, research, and administration across diverse domains and technologies.
-      Her areas of interest are in <strong>signal processing</strong>, <strong>video analytics</strong>, and <strong>Artificial Intelligence</strong>.
-    </p>
+  <!-- Hero Section (text only) -->
+  <section class="about-hero-fade" id="heroFade">
+    <h1>About Dr. Parul Jadhav</h1>
+    <p>Educator. Researcher. Innovator.</p>
   </section>
 
-  <!-- === EDUCATION === -->
-  <section class="education-section">
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>2017 – Ph.D (Electronics and Telecommunication)</strong><br/>
-        College Of Engineering Pune (COEP)<br/>
-        Publications include over 30 papers in National and International Journals.<br/>
-        <br/>
-        Core research areas:
-        <ul>
-          <li>Video processing, adaptive video streaming</li>
-          <li>Compression techniques</li>
-          <li>Signal Processing</li>
-          <li>Machine Learning</li>
-        </ul>
-      </li>
-      <li>
-        <strong>1997 – M.E. (Electronics and Telecommunication)</strong><br/>
-        College Of Engineering Pune (COEP) — First Class
-      </li>
-      <li>
-        <strong>1992 – B.E. (Electronics and Telecommunication)</strong><br/>
-        College Of Engineering Pune (COEP) — First Class with Distinction
-      </li>
-    </ul>
-  </section>
+  <!-- Main Content (Initially Hidden) -->
+  <main id="aboutMain" class="about-main-content hidden">
+    <section class="about-section">
+      <p>
+        Dr. Parul Jadhav is an Associate Professor in the School of Electronics and Communication at MIT WPU.
+        She has over <strong>29 years</strong> of experience in teaching, learning, research, and administration across diverse domains and technologies.
+        Her areas of interest are in <strong>signal processing</strong>, <strong>video analytics</strong>, and <strong>Artificial Intelligence</strong>.
+      </p>
+    </section>
+
+    <section class="timeline-tech" id="education">
+      <h2>Education</h2>
+      <div class="edu-line">
+        <div class="edu-dot"></div>
+        <div class="edu-card">
+          <h3>2017 – Ph.D. (Electronics & Telecommunication)</h3>
+          <p>COEP (College Of Engineering Pune)</p>
+          <ul>
+            <li>30+ publications in national/international journals</li>
+            <li>Research areas: Video Streaming, Compression, Signal Processing, ML</li>
+          </ul>
+        </div>
+
+        <div class="edu-dot"></div>
+        <div class="edu-card">
+          <h3>1997 – M.E. (Electronics & Telecommunication)</h3>
+          <p>COEP — First Class</p>
+        </div>
+
+        <div class="edu-dot"></div>
+        <div class="edu-card">
+          <h3>1992 – B.E. (Electronics & Telecommunication)</h3>
+          <p>COEP — First Class with Distinction</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Dr. Parul Jadhav. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    setTimeout(() => {
+      document.getElementById("heroFade").classList.add("fade-out");
+      setTimeout(() => {
+        document.getElementById("heroFade").style.display = "none";
+        document.getElementById("aboutMain").classList.remove("hidden");
+      }, 1000);
+    }, 5000);
+  </script>
 </body>
 </html>
