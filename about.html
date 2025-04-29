@@ -79,17 +79,18 @@
     </section>
 
     <!-- Contact Section -->
-    <footer id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:parul.jadhav@example.com">parul.jadhav@example.com</a></p>
-      <p>MIT World Peace University, Pune</p>
-      <p>
-        <a href="https://in.linkedin.com/in/dr-parul-jadhav-28b52b37" target="_blank">LinkedIn</a> |
-        <a href="https://scholar.google.com/citations?user=DObFL0IAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-        <a href="https://www.researchgate.net/profile/Parul-Jadhav" target="_blank">ResearchGate</a>
-      </p>
-    </footer>
-  </main>
+  <div id="contact-placeholder"></div>
+<script>
+  fetch("contact.html")
+    .then(response => response.text())
+    .then(data => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+      const contactSection = doc.querySelector('main')?.outerHTML + doc.querySelector('footer')?.outerHTML;
+      document.getElementById("contact-placeholder").innerHTML = contactSection;
+    });
+</script>
+
 
   <!-- Fade Animation Script -->
   <script>
