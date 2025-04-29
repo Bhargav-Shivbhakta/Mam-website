@@ -2,48 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Parul Jadhav | Research</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research | Dr. Parul Jadhav</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    body {
-      font-family: 'Lato', sans-serif;
-      background: linear-gradient(to right, #300047, #c200db, #00cfe5);
-      color: white;
-      padding: 0;
-      margin: 0;
-    }
-    .section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 4rem 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #00cfe5;
-      padding-bottom: 0.5rem;
-      margin-top: 2rem;
-      font-size: 2rem;
-    }
-    h3 {
-      margin-top: 1.5rem;
-      color: #00cfe5;
-    }
-    img.research-img {
-      max-width: 400px;
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin: 1rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    a {
-      color: #00f5ff;
-      text-decoration: underline;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-title">Dr. Parul Jadhav</div>
@@ -53,62 +19,78 @@
         <li><a href="achievements.html">Achievements</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects/Seminars</a></li>
+        <li><a href="lectures.html">Expert Lecture</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="section">
-    <h1>Research Themes</h1>
+  <!-- Research Content -->
+  <section class="research-wrapper-light">
+    <h1 class="section-title">Research Themes</h1>
+    <p style="text-align:center; margin-bottom: 1rem;">
+      ORCID: <a href="https://orcid.org/0000-0002-5083-2900" target="_blank" style="color:#003845;">https://orcid.org/0000-0002-5083-2900</a>
+    </p>
 
-    <h2>Video Compression Techniques</h2>
-    <p>This research focuses on optimizing video compression technique using H.264. The work includes:
+    <!-- Video Compression -->
+    <div class="research-theme">
+      <h2>Video Compression Techniques</h2>
+      <p>This research focuses on optimizing H.264 scalable video compression. It includes:</p>
       <ul>
-        <li>Spatial resolution based macro block mapping for scalable enhancement</li>
-        <li>Spatial-temporal search algorithm to improve prediction accuracy</li>
-        <li>Independent rate control algorithm for efficient bit allocation</li>
+        <li>Macro block mapping for resolution enhancement</li>
+        <li>Spatial-temporal prediction algorithms</li>
+        <li>Independent rate control for scalable bit allocation</li>
       </ul>
-    </p>
+    </div>
 
-    <h2>Video Analytics</h2>
-    <p>Normal and abnormal human activity detection using CNN, RNN, and LSTM. This deep learning project aims to detect criminal behavior in Indian crime contexts using transfer learning.</p>
-    <img src="assets/img/Detection.avif" alt="Video Analytics" class="research-img" />
+    <!-- Video Analytics -->
+    <div class="research-theme">
+      <h2>Video Analytics for Public Safety</h2>
+      <img src="assets/img/Detection.avif" alt="Human Activity Detection" class="research-img" />
+      <p>Focuses on human behavior analysis using CNN + LSTM to detect criminal activity with transfer learning for Indian crime scenarios.</p>
+    </div>
 
-    <h2>Signal Processing</h2>
-    <p>Reconstructing coded-mask images from space using entropy maximization on photon energy data captured in FITS format for unique source mapping.</p>
+    <!-- Signal Processing -->
+    <div class="research-theme">
+      <h2>Signal Processing & Image Reconstruction</h2>
+      <p>Using entropy-based decoding of coded-mask images from photon data captured in space, improving astrophysics image clarity via entropy maximization.</p>
+    </div>
 
-    <h2>LiDAR Technology</h2>
-    <p>Sensor fusion using Camera and LiDAR for object classification and positioning in autonomous vehicle scenarios using Carla simulator and ML.</p>
-    <img src="assets/img/11.avif" alt="LiDAR Project" class="research-img" />
+    <!-- LiDAR Technology -->
+    <div class="research-theme">
+      <h2>LiDAR + Sensor Fusion</h2>
+      <img src="assets/img/11.avif" alt="LiDAR Object Detection" class="research-img" />
+      <p>Uses LiDAR and camera fusion in Carla simulator for object detection and 3D localization in self-driving vehicle environments.</p>
+    </div>
 
-    <h2>Research Projects</h2>
+    <!-- Funded Projects -->
+    <h1 class="section-title">Funded Research Projects</h1>
 
-    <h3>Yield Prediction in Vineyards using LiDAR</h3>
-    <p>Research funded by Department of Science and Technology, WOS-B. 2D/3D imagery used to estimate grape yield using deep learning.</p>
-    <img src="assets/img/grape-1.avif" alt="Grape Project" class="research-img" />
+    <div class="research-project">
+      <h3>Yield Prediction in Vineyards using LiDAR</h3>
+      <img src="assets/img/grape-1.avif" class="research-img" alt="Grapes LiDAR" />
+      <p>WOS-B funded project for grape cluster detection and yield estimation using LiDAR, deep learning, and 2D/3D image processing.</p>
+    </div>
 
-    <h3>Optimized Video Compression for Real-Time Applications</h3>
-    <p>Funded project on scalable coding algorithms to address dynamic bandwidth streaming using H.264 framework.</p>
-    <img src="assets/img/video-1.avif" alt="Video Compression" class="research-img" />
+    <div class="research-project">
+      <h3>Optimized Video Compression for Real-Time Applications</h3>
+      <img src="assets/img/video-1.avif" class="research-img" alt="Video Compression" />
+      <p>Developed scalable video coding algorithms for dynamic bandwidth environments to support real-time adaptive streaming.</p>
+    </div>
+  </section>
 
-    <h2>Research Team</h2>
-    <p>Collaborative efforts with graduate and postgraduate researchers under Dr. Parul Jadhav's supervision at MIT-WPU.</p>
-
-    <h2>Patents</h2>
-    <ul>
-      <li><strong>An Automated Grape Cluster Weight Prediction System</strong> – Granted (2022 703 741)</li>
-      <li><strong>Multi-regression Grape Weight Prediction System</strong> – Granted (2022/6787)</li>
-      <li><strong>Low Power and Low Area Mash 2-2 Modulator</strong> – Granted (FA/536/MUM/2022)</li>
-    </ul>
-
-    <h2>ORCID</h2>
-    <p>
-      <a href="https://orcid.org/0000-0002-5083-2900" target="_blank">https://orcid.org/0000-0002-5083-2900</a>
-    </p>
-  </div>
-
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Dr. Parul Jadhav. All Rights Reserved.</p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:parul.jadhav@example.com">parul.jadhav@example.com</a></p>
+    <p>MIT World Peace University, Pune</p>
+    <p>
+      <a href="https://in.linkedin.com/in/dr-parul-jadhav-28b52b37" target="_blank">LinkedIn</a> |
+      <a href="https://scholar.google.com/citations?user=DObFL0IAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+      <a href="https://www.researchgate.net/profile/Parul-Jadhav" target="_blank">ResearchGate</a>
+    </p>
   </footer>
+
 </body>
 </html>
