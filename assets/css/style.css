@@ -211,3 +211,63 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+/* Hero Split Layout */
+.split-hero {
+  flex-direction: row;
+  gap: 4rem;
+  padding: 4rem 6%;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-left img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 6px solid #00CFE5;
+  object-fit: cover;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+.hero-left img:hover {
+  transform: scale(1.05);
+}
+
+.hero-right {
+  flex: 2;
+  text-align: left;
+  color: white;
+}
+.hero-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-right h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #D6F0FA;
+}
+.hero-right p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background-color: #00CFE5;
+  color: #0C0931;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.cta-btn:hover {
+  background-color: #013849;
+  color: white;
+}
