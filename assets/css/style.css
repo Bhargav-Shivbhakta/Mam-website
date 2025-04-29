@@ -123,22 +123,22 @@ a {
 
 /* === About Hero (Text Only) === */
 .about-hero-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   background: linear-gradient(135deg, #C200DB, #00CFE5);
   color: white;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   animation: gradient-shift 15s ease infinite;
   transition: opacity 1s ease;
+  z-index: 999;
 }
-.fade-out {
-  opacity: 0;
-}
-.hidden {
-  display: none;
-}
+
 
 /* === About Section === */
 .about-main-content {
