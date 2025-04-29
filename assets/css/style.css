@@ -348,4 +348,41 @@ footer a:hover {
   margin-top: 0.5rem;
   color: #e0e0e0;
 }
+.research-wrapper-light {
+  background: #f8f3ff;
+  padding: 5rem 2rem;
+  color: #111;
+}
+
+.research-wrapper-light h1.section-title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  color: #300047;
+}
+
+.research-theme, .research-project {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.research-theme h2,
+.research-project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #0b0b2c;
+}
+
+.research-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
 
