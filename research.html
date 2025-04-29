@@ -2,31 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Parul Jadhav | Research</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research | Dr. Parul Jadhav</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
   <nav class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="media.html">Media</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Publications</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
-  <main>
-    <h1>Research Page</h1>
-    <p>This is a placeholder for the Research page content.</p>
-  </main>
+  <section class="research-hero">
+    <h1 data-aos="fade-up">Research Areas</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Exploring the future of AI, Data, and Smart Systems</p>
+  </section>
+
+  <section class="research-cards">
+    <div class="card" data-aos="fade-up">
+      <h3>Artificial Intelligence</h3>
+      <p>Machine learning, predictive modeling, and intelligent decision systems.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <h3>Data Science</h3>
+      <p>Big data analytics, statistical modeling, and domain-driven insights.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <h3>IoT & Smart Systems</h3>
+      <p>Cyber-physical systems, embedded intelligence, and real-time monitoring.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <h3>Cloud & Edge Computing</h3>
+      <p>Scalable infrastructures and distributed architecture design.</p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Dr. Parul Jadhav. All Rights Reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
