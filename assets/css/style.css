@@ -63,8 +63,7 @@ a {
 
 /* === Home Hero Section === */
 .hero {
-  height: auto;
-  min-height: 60vh;
+  min-height: 100vh; /* Full viewport height */
   background: linear-gradient(135deg, #0C0931, #1D1856, #C200DB, #00CFE5);
   background-size: 300% 300%;
   animation: gradient-shift 15s ease infinite;
@@ -72,11 +71,11 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  gap: 4rem;
-  padding: 1rem 5% 2rem;
-  margin-top: 0;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
+
 .hero-left img {
   width: 340px;
   height: 340px;
