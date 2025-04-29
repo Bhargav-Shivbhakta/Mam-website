@@ -2,56 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | Dr. Parul Jadhav</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="#">Publications</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <div class="nav-title">Dr. Parul Jadhav</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects/Seminars</a></li>
+        <li><a href="lectures.html">Expert Lecture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <section class="research-hero">
-    <h1 data-aos="fade-up">Research Areas</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Exploring the future of AI, Data, and Smart Systems</p>
-  </section>
+  <!-- Research Section -->
+  <section class="research-wrapper">
+    <h1 class="section-title">Research Papers</h1>
 
-  <section class="research-cards">
-    <div class="card" data-aos="fade-up">
-      <h3>Artificial Intelligence</h3>
-      <p>Machine learning, predictive modeling, and intelligent decision systems.</p>
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="100">
-      <h3>Data Science</h3>
-      <p>Big data analytics, statistical modeling, and domain-driven insights.</p>
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <h3>IoT & Smart Systems</h3>
-      <p>Cyber-physical systems, embedded intelligence, and real-time monitoring.</p>
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="300">
-      <h3>Cloud & Edge Computing</h3>
-      <p>Scalable infrastructures and distributed architecture design.</p>
+    <div id="papers-container" class="papers-container">
+      <!-- Papers will load here dynamically -->
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Dr. Parul Jadhav. All Rights Reserved.</p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:parul.jadhav@example.com">parul.jadhav@example.com</a></p>
+    <p>MIT World Peace University, Pune</p>
+    <p>
+      <a href="https://in.linkedin.com/in/dr-parul-jadhav-28b52b37" target="_blank">LinkedIn</a> |
+      <a href="https://scholar.google.com/citations?user=DObFL0IAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+      <a href="https://www.researchgate.net/profile/Parul-Jadhav" target="_blank">ResearchGate</a>
+    </p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <!-- JavaScript to Load Papers -->
+  <script>
+    fetch('assets/data/papers.json')
+      .then(response => response.json())
+      .then(papers => {
+        const container = document.getElementById('papers-container');
+        papers.slice(0, 10).forEach(paper => {
+          const paperDiv = document.createElement('div');
+          paperDiv.className = 'paper-card';
+          paperDiv.innerHTML = `
+            <h3><a href="${paper.link}" target="_blank">${paper.title}</a></h3>
+            <p>Year: ${paper.year}</p>
+          `;
+          container.appendChild(paperDiv);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading papers:', error);
+      });
+  </script>
+
 </body>
 </html>
