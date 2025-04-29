@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Research | Dr. Parul Jadhav</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -26,17 +26,63 @@
     </div>
   </nav>
 
-  <!-- Research Section -->
+  <!-- Research Themes Section -->
   <section class="research-wrapper">
-    <h1 class="section-title">Research Papers</h1>
+    <h1 class="section-title">Research Themes</h1>
+    <p style="text-align:center; margin-bottom: 1rem;">
+      ORCID: <a href="https://orcid.org/0000-0002-5083-2900" target="_blank" style="color:#00cfe5;">https://orcid.org/0000-0002-5083-2900</a>
+    </p>
 
-    <!-- ORCID ID Line -->
-    <div class="orcid-line">
-      <p>ORCID: <a href="https://orcid.org/0000-0002-5083-2900" target="_blank">0000-0002-5083-2900</a></p>
+    <!-- Video Compression -->
+    <div class="research-theme">
+      <h2>Video Compression Techniques</h2>
+      <p>This research focuses on optimizing H.264 scalable video compression. It includes:</p>
+      <ul>
+        <li>Macro block mapping for resolution enhancement</li>
+        <li>Spatial-temporal prediction algorithms</li>
+        <li>Independent rate control for scalable bit allocation</li>
+      </ul>
     </div>
 
+    <!-- Video Analytics -->
+    <div class="research-theme">
+      <h2>Video Analytics for Public Safety</h2>
+      <img src="assets/img/detection.jpg" alt="Human Activity Detection" class="research-img" />
+      <p>Focuses on human behavior analysis using CNN + LSTM to detect criminal activity with transfer learning for Indian crime scenarios.</p>
+    </div>
+
+    <!-- Signal Processing -->
+    <div class="research-theme">
+      <h2>Signal Processing & Image Reconstruction</h2>
+      <p>Using entropy-based decoding of coded-mask images from photon data captured in space, improving astrophysics image clarity via entropy maximization.</p>
+    </div>
+
+    <!-- LiDAR Technology -->
+    <div class="research-theme">
+      <h2>LiDAR + Sensor Fusion</h2>
+      <img src="assets/img/11.jpg" alt="LiDAR Object Detection" class="research-img" />
+      <p>Uses LiDAR and camera fusion in Carla simulator for object detection and 3D localization in self-driving vehicle environments.</p>
+    </div>
+
+    <!-- Funded Projects -->
+    <h1 class="section-title">Funded Research Projects</h1>
+
+    <div class="research-project">
+      <h3>Yield Prediction in Vineyards using LiDAR</h3>
+      <img src="assets/img/grape-1.jpg" class="research-img" alt="Grapes LiDAR" />
+      <p>WOS-B funded project for grape cluster detection and yield estimation using LiDAR, deep learning, and 2D/3D image processing.</p>
+    </div>
+
+    <div class="research-project">
+      <h3>Optimized Video Compression for Real-Time Applications</h3>
+      <img src="assets/img/video-1.jpg" class="research-img" alt="Video Compression" />
+      <p>Developed scalable video coding algorithms for dynamic bandwidth environments to support real-time adaptive streaming.</p>
+    </div>
+
+    <!-- Dynamic Publications -->
+    <h1 class="section-title">Latest Publications</h1>
     <div id="papers-container" class="papers-container">
-      <!-- Papers will load here dynamically -->
+      <!-- Fetched from JSON -->
     </div>
   </section>
 
@@ -52,7 +98,7 @@
     </p>
   </footer>
 
-  <!-- JavaScript to Load Papers -->
+  <!-- Load Papers Script -->
   <script>
     fetch('assets/data/papers.json')
       .then(response => response.json())
@@ -67,9 +113,6 @@
           `;
           container.appendChild(paperDiv);
         });
-      })
-      .catch(error => {
-        console.error('Error loading papers:', error);
       });
   </script>
 
