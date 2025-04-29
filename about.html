@@ -79,15 +79,17 @@
   </footer>
 
   <!-- Fade Script -->
-  <script>
+<script>
+  setTimeout(() => {
+    const hero = document.getElementById("heroFade");
+    hero.classList.add("fade-out");
+
     setTimeout(() => {
-      document.getElementById("heroFade").classList.add("fade-out");
-      setTimeout(() => {
-        document.getElementById("heroFade").style.display = "none";
-        document.getElementById("aboutMain").classList.remove("hidden");
-      }, 1000);
-    }, 5000);
-  </script>
+      hero.remove(); // completely removes the hero section
+      document.getElementById("aboutMain").classList.remove("hidden");
+    }, 1000);
+  }, 5000);
+</script>
 
 </body>
 </html>
