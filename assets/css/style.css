@@ -1,294 +1,192 @@
-body, html {
+/* Base setup */
+* {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
-/* === Base === */
+
 body {
-  margin: 0;
   font-family: 'Lato', sans-serif;
-  background-color: #f2f8fc;
-  color: #111111;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  color: #111;
+  line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* === Navbar === */
+/* Navbar */
 .navbar {
-  background-color: #0C0931;
-  padding: 0.5rem 2rem;
+  background-color: #0b0b2c;
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
-  margin: auto;
 }
+
 .nav-title {
   color: white;
+  font-size: 1.4rem;
   font-weight: bold;
-  font-size: 1.2rem;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+  gap: 1.5rem;
 }
-.nav-links a {
+
+.nav-links li a {
+  text-decoration: none;
   color: white;
   font-weight: bold;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #00CFE5;
+  transition: color 0.3s;
 }
 
-/* === Hero Gradient Animation === */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.nav-links li a:hover {
+  color: #00cfe5;
 }
 
-/* === Home Hero Section === */
+/* Hero Section (index) */
 .hero {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0C0931, #1D1856, #C200DB, #00CFE5);
-  background-size: 300% 300%;
-  animation: gradient-shift 15s ease infinite;
-  color: white;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  padding: 2rem 5%;
-  box-sizing: border-box;
-  gap: 3rem;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #300047, #c200db, #00cfe5);
+  color: white;
 }
 
 .hero-left img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 5px solid #00CFE5;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: 5px solid #00cfe5;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .hero-right {
+  margin-left: 3rem;
   max-width: 600px;
 }
 
 .hero-right h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .hero-right h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #ccc;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #c0e9ff;
 }
 
 .hero-right p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #eaeaea;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .cta-btn {
-  background-color: #00CFE5;
+  padding: 0.7rem 1.5rem;
+  background-color: #00cfe5;
   color: #000;
   border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
   border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-  background-color: #00bcd4;
+  background-color: #00b5cf;
 }
 
-
-/* === About Hero (Text Only) === */
-.about-hero-fade {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(135deg, #C200DB, #00CFE5);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: gradient-shift 15s ease infinite;
-  transition: opacity 1s ease;
-  z-index: 999;
-}
-
-
-/* === About Section === */
-.about-main-content {
-  padding: 2rem;
-}
+/* About Page Sections */
 .about-section {
-  max-width: 900px;
+  padding: 5rem 2rem 2rem;
+  background: #f8f3ff;
+  color: #222;
+  max-width: 1000px;
   margin: auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
 }
 
-/* === Timeline Tech Style === */
-.timeline-tech {
-  max-width: 900px;
-  margin: 3rem auto;
-  position: relative;
-  padding-left: 2rem;
+.about-section h2 {
+  margin-bottom: 1rem;
 }
+
+/* Timeline/Education */
+.timeline-tech {
+  background-color: #ecf8ff;
+  padding: 4rem 2rem;
+}
+
 .timeline-tech h2 {
   text-align: center;
-  color: #0C0931;
   margin-bottom: 2rem;
 }
+
 .edu-line {
   position: relative;
-  border-left: 3px solid #00CFE5;
+  margin: auto;
+  max-width: 800px;
+  padding-left: 1rem;
+  border-left: 4px solid #00cfe5;
+}
+
+.edu-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #00cfe5;
+  border-radius: 50%;
+  position: relative;
+  left: -12px;
+  margin: 2rem 0;
+}
+
+.edu-card {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.edu-card h3 {
+  font-size: 1.2rem;
+  color: #0b0b2c;
+}
+
+.edu-card ul {
+  margin-top: 0.5rem;
   padding-left: 1.5rem;
 }
-.edu-dot {
-  width: 14px;
-  height: 14px;
-  background-color: #00CFE5;
-  border-radius: 50%;
-  margin-left: -22px;
-  position: relative;
-  top: 12px;
-}
-.edu-card {
-  background: linear-gradient(145deg, #f0faff, #e0f7ff);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
-}
-.edu-card h3 {
-  margin-top: 0;
-  color: #0C0931;
-}
-.edu-card p, .edu-card li {
-  color: #333;
-}
 
-/* === Footer === */
+/* Footer */
 footer {
-  background-color: #013849;
+  background-color: #003845;
   color: white;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  padding: 2rem;
 }
 
-/* Hero Fade Section */
-.about-hero-fade {
-  background: linear-gradient(135deg, #C200DB, #00CFE5);
-  color: white;
-  padding: 5rem 2rem;
-  text-align: center;
-  animation: gradient-shift 15s ease infinite;
-  transition: opacity 1s ease;
+footer a {
+  color: #00cfe5;
+  text-decoration: none;
 }
-.about-hero-fade h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+
+footer a:hover {
+  text-decoration: underline;
 }
-.about-hero-fade p {
-  font-size: 1.2rem;
-}
-.fade-out {
-  opacity: 0;
-}
+
+/* Hidden and fade-out helpers */
 .hidden {
   display: none;
 }
 
-/* About Content */
-.about-main-content {
-  padding: 2rem;
-}
-.about-section {
-  max-width: 900px;
-  margin: auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-/* Timeline Education Section */
-.timeline-tech {
-  max-width: 900px;
-  margin: 3rem auto;
-  position: relative;
-  padding-left: 2rem;
-}
-.timeline-tech h2 {
-  text-align: center;
-  color: #0C0931;
-  margin-bottom: 2rem;
-}
-.edu-line {
-  position: relative;
-  border-left: 3px solid #00CFE5;
-  padding-left: 1.5rem;
-}
-.edu-dot {
-  width: 14px;
-  height: 14px;
-  background-color: #00CFE5;
-  border-radius: 50%;
-  margin-left: -22px;
-  position: relative;
-  top: 12px;
-}
-.edu-card {
-  background: linear-gradient(145deg, #f0faff, #e0f7ff);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
-}
-.edu-card h3 {
-  margin-top: 0;
-  color: #0C0931;
-}
-.edu-card p, .edu-card li {
-  color: #333;
-}
-
-footer {
-  background-color: #013849;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 1rem;
-}
-footer a {
-  color: #00CFE5;
-}
-footer h2 {
-  margin-top: 0;
-  font-size: 1.5rem;
+#heroFade.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
