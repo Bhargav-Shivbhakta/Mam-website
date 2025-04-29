@@ -1,0 +1,52 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #EFE9DB; /* Child of Heaven */
+  color: #222;
+}
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+.navbar {
+  background-color: #3F4C66; /* Quiet Peace */
+  padding: 1em;
+  text-align: center;
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.navbar a {
+  color: #EFE9DB;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #3F4C66;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Optional Section Backgrounds (lighter beige tones) */
+.section-summer-beige {
+  background-color: #D8BFAF;
+  padding: 2em;
+}
+.section-always-neutral {
+  background-color: #DDD5C7;
+  padding: 2em;
+}
+.section-turkish-tower {
+  background-color: #D8D7CD;
+  padding: 2em;
+}
