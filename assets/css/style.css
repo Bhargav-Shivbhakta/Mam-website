@@ -319,3 +319,49 @@ footer {
   background-color: #013849;
   color: white;
 }
+
+.about-section {
+  background: linear-gradient(135deg, #C200DB, #00CFE5);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+}
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.education-section {
+  background-color: #f8f8f8;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.education-section h2 {
+  text-align: center;
+  color: #0C0931;
+  margin-bottom: 2rem;
+}
+.education-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.education-section li {
+  background: white;
+  border-left: 6px solid #00CFE5;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+}
+.education-section li ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
