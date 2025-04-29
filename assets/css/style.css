@@ -54,8 +54,6 @@ a {
 
 /* === Hero Section Refined === */
 .hero {
-  height: auto;
-  min-height: 30vh;
   background: linear-gradient(135deg,
     #0C0931 0%,
     #1D1856 25%,
@@ -69,10 +67,14 @@ a {
   text-align: left;
   background-size: 300% 300%;
   animation: gradient-shift 15s ease infinite;
-  gap: 4rem;
-  padding: 0 5% 2rem;
+
+  /* ↓↓↓ KEY CHANGES ↓↓↓ */
+  gap: 3rem;
+  padding: 1rem 5% 2rem;    /* reduced top padding */
   margin-top: 0;
+  min-height: 65vh;         /* slightly shorter overall */
 }
+
 
 
 .hero-left img {
