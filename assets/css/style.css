@@ -63,63 +63,65 @@ a {
 
 /* === Home Hero Section === */
 .hero {
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
   background: linear-gradient(135deg, #0C0931, #1D1856, #C200DB, #00CFE5);
   background-size: 300% 300%;
   animation: gradient-shift 15s ease infinite;
   color: white;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  padding: 2rem;
+  justify-content: center;
+  padding: 2rem 5%;
   box-sizing: border-box;
+  gap: 3rem;
 }
 
 .hero-left img {
-  width: 340px;
-  height: 340px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  border: 6px solid #00CFE5;
+  border: 5px solid #00CFE5;
   object-fit: cover;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
-.hero-left img:hover {
-  transform: scale(1.05);
-}
+
 .hero-right {
-  flex: 2;
-  text-align: left;
-  color: white;
+  max-width: 600px;
 }
+
 .hero-right h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 0.5rem;
 }
+
 .hero-right h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #D6F0FA;
-}
-.hero-right p {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  line-height: 1.6;
+  color: #ccc;
 }
+
+.hero-right p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #eaeaea;
+}
+
 .cta-btn {
   background-color: #00CFE5;
-  color: #0C0931;
-  padding: 0.7rem 1.5rem;
+  color: #000;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
 }
+
 .cta-btn:hover {
-  background-color: #013849;
-  color: white;
+  background-color: #00bcd4;
 }
+
 
 /* === About Hero (Text Only) === */
 .about-hero-fade {
