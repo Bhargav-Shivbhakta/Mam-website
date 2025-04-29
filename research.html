@@ -26,14 +26,14 @@
     </div>
   </nav>
 
-  <!-- Research Themes Section -->
+  <!-- Research Content -->
   <section class="research-wrapper">
     <h1 class="section-title">Research Themes</h1>
     <p style="text-align:center; margin-bottom: 1rem;">
       ORCID: <a href="https://orcid.org/0000-0002-5083-2900" target="_blank" style="color:#00cfe5;">https://orcid.org/0000-0002-5083-2900</a>
     </p>
 
-    <!-- Video Compression -->
+    <!-- Theme: Video Compression -->
     <div class="research-theme">
       <h2>Video Compression Techniques</h2>
       <p>This research focuses on optimizing H.264 scalable video compression. It includes:</p>
@@ -44,45 +44,45 @@
       </ul>
     </div>
 
-    <!-- Video Analytics -->
+    <!-- Theme: Video Analytics -->
     <div class="research-theme">
       <h2>Video Analytics for Public Safety</h2>
-      <img src="assets/img/detection.jpg" alt="Human Activity Detection" class="research-img" />
+      <img src="assets/img/Detection.avif" alt="Human Activity Detection" class="research-img" />
       <p>Focuses on human behavior analysis using CNN + LSTM to detect criminal activity with transfer learning for Indian crime scenarios.</p>
     </div>
 
-    <!-- Signal Processing -->
+    <!-- Theme: Signal Processing -->
     <div class="research-theme">
       <h2>Signal Processing & Image Reconstruction</h2>
       <p>Using entropy-based decoding of coded-mask images from photon data captured in space, improving astrophysics image clarity via entropy maximization.</p>
     </div>
 
-    <!-- LiDAR Technology -->
+    <!-- Theme: LiDAR Technology -->
     <div class="research-theme">
       <h2>LiDAR + Sensor Fusion</h2>
-      <img src="assets/img/11.jpg" alt="LiDAR Object Detection" class="research-img" />
+      <img src="assets/img/11.avif" alt="LiDAR Object Detection" class="research-img" />
       <p>Uses LiDAR and camera fusion in Carla simulator for object detection and 3D localization in self-driving vehicle environments.</p>
     </div>
 
-    <!-- Funded Projects -->
+    <!-- Funded Projects Section -->
     <h1 class="section-title">Funded Research Projects</h1>
 
     <div class="research-project">
       <h3>Yield Prediction in Vineyards using LiDAR</h3>
-      <img src="assets/img/grape-1.jpg" class="research-img" alt="Grapes LiDAR" />
+      <img src="assets/img/grape-1.avif" class="research-img" alt="Grapes LiDAR" />
       <p>WOS-B funded project for grape cluster detection and yield estimation using LiDAR, deep learning, and 2D/3D image processing.</p>
     </div>
 
     <div class="research-project">
       <h3>Optimized Video Compression for Real-Time Applications</h3>
-      <img src="assets/img/video-1.jpg" class="research-img" alt="Video Compression" />
+      <img src="assets/img/video-1.avif" class="research-img" alt="Video Compression" />
       <p>Developed scalable video coding algorithms for dynamic bandwidth environments to support real-time adaptive streaming.</p>
     </div>
 
-    <!-- Dynamic Publications -->
+    <!-- Latest Publications -->
     <h1 class="section-title">Latest Publications</h1>
     <div id="papers-container" class="papers-container">
-      <!-- Fetched from JSON -->
+      <!-- Papers loaded dynamically from JSON -->
     </div>
   </section>
 
@@ -98,7 +98,7 @@
     </p>
   </footer>
 
-  <!-- Load Papers Script -->
+  <!-- Script to load papers -->
   <script>
     fetch('assets/data/papers.json')
       .then(response => response.json())
@@ -113,7 +113,8 @@
           `;
           container.appendChild(paperDiv);
         });
-      });
+      })
+      .catch(err => console.error("Error loading papers:", err));
   </script>
 
 </body>
