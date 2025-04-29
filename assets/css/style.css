@@ -26,6 +26,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+/* Ensure the main achievements background spans full screen width */
+.achievements-wrapper {
+  background: linear-gradient(to right, #300047, #c200db, #00cfe5);
+  color: white;
+  padding: 5rem 2rem;
+  min-height: 100vh;
+  width: 100%;
+}
 
 .nav-title {
   color: white;
