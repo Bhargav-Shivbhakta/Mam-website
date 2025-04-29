@@ -6,74 +6,52 @@
   <title>About | Dr. Parul Jadhav</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    #heroFade {
-      height: 100vh;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: linear-gradient(135deg, #C200DB, #00CFE5);
-      color: white;
-      font-family: 'Lato', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      transition: opacity 1s ease-out;
-    }
-
-    #heroFade.fade-out {
-      opacity: 0;
-    }
-
-    #aboutMain.hidden {
-      display: none;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Navbar (fixed and shown always) -->
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-title">Dr. Parul Jadhav</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#projects">Projects/Seminars</a></li>
-        <li><a href="#lectures">Expert Lecture</a></li>
+        <li><a href="#">Achievements</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Publications</a></li>
+        <li><a href="#">Projects/Seminars</a></li>
+        <li><a href="#">Expert Lecture</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Intro Screen -->
+  <!-- Hero Fade Animation Section -->
   <section id="heroFade">
     <h1>About Dr. Parul Jadhav</h1>
     <p>Educator. Researcher. Innovator.</p>
   </section>
 
-  <!-- Main About Section (hidden initially) -->
+  <!-- Main About Content -->
   <main id="aboutMain" class="hidden">
     <section class="about-section">
       <p>
-        Dr. Parul Jadhav is an Associate Professor in the School of Electronics and Communication at MIT WPU.
-        She has over <strong>29 years</strong> of experience in teaching, learning, research, and administration across diverse domains and technologies.
-        Her areas of interest are in <strong>signal processing</strong>, <strong>video analytics</strong>, and <strong>Artificial Intelligence</strong>.
+        Dr. Parul Jadhav is an Associate Professor in the School of Electronics and Communication at MIT WPU. 
+        She has over <strong>29 years</strong> of experience in teaching, learning, research, and administration 
+        across diverse domains and technologies. Her areas of interest are in 
+        <strong>signal processing</strong>, <strong>video analytics</strong>, and 
+        <strong>Artificial Intelligence</strong>.
       </p>
     </section>
 
-    <section class="timeline-tech" id="education">
+    <!-- Education Timeline -->
+    <section class="timeline-tech">
       <h2>Education</h2>
       <div class="edu-line">
+
         <div class="edu-dot"></div>
         <div class="edu-card">
-          <h3>2017 – Ph.D. (Electronics & Telecommunication)</h3>
+          <h3>2017 – Ph.D (Electronics and Telecommunication)</h3>
           <p>COEP (College Of Engineering Pune)</p>
           <ul>
             <li>30+ publications in national/international journals</li>
@@ -83,19 +61,20 @@
 
         <div class="edu-dot"></div>
         <div class="edu-card">
-          <h3>1997 – M.E. (Electronics & Telecommunication)</h3>
+          <h3>1997 – M.E. (Electronics and Telecommunication)</h3>
           <p>COEP — First Class</p>
         </div>
 
         <div class="edu-dot"></div>
         <div class="edu-card">
-          <h3>1992 – B.E. (Electronics & Telecommunication)</h3>
+          <h3>1992 – B.E. (Electronics and Telecommunication)</h3>
           <p>COEP — First Class with Distinction</p>
         </div>
+
       </div>
     </section>
 
-    <!-- Footer Contact (scrolls naturally) -->
+    <!-- Contact Section -->
     <footer id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:parul.jadhav@example.com">parul.jadhav@example.com</a></p>
@@ -104,13 +83,12 @@
     </footer>
   </main>
 
-  <!-- Hero Fade Script -->
+  <!-- Fade Animation Script -->
   <script>
     setTimeout(() => {
-      const hero = document.getElementById("heroFade");
-      hero.classList.add("fade-out");
+      document.getElementById("heroFade").classList.add("fade-out");
       setTimeout(() => {
-        hero.remove(); // Ensures no overlap or scroll issues
+        document.getElementById("heroFade").style.display = "none";
         document.getElementById("aboutMain").classList.remove("hidden");
       }, 1000);
     }, 5000);
