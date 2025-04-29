@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications | Dr. Parul Jadhav</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+  <style>
+    .pub-section {
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, #300047, #c200db, #00cfe5);
+      color: white;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .pub-section h1, .pub-section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .pub-entry {
+      background-color: rgba(255,255,255,0.1);
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .dataset-link {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .dataset-link a {
+      color: #00ffff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 4rem;
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,55 +59,46 @@
         <li><a href="about.html">About</a></li>
         <li><a href="achievements.html">Achievements</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects/Seminars</a></li>
+        <li><a href="lectures.html">Expert Lecture</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Publications Content -->
-  <section class="about-section">
-    <h1 style="text-align: center;">Publications</h1>
+  <section class="pub-section">
+    <h1>Publications</h1>
 
-    <h2>Dataset</h2>
-    <p><a href="https://ieee-dataport.org/documents/crime-video-dataset-indian-scenarios" target="_blank">
-      Crime Video Dataset for Indian Scenario</a></p>
+    <div class="dataset-link">
+      <h2>Dataset</h2>
+      <a href="https://ieee-dataport.org/documents/crime-video-dataset-indian-scenarios" target="_blank">
+        Crime Video Dataset for Indian Scenario
+      </a>
+    </div>
 
     <h2>Selected Papers Published</h2>
-    <ul>
-      <li>D. Barbole, P. Jadhav, “GrapesNet: Indian RGB and RGB-D Vineyard Image Dataset for Deep Learning Applications”, Data In Brief, March 2023</li>
-      <li>S. Muley, P. Jadhav, “AI for Detection of Covid-19 Pneumonia on Chest X-Ray,” IEEE CICT-2022</li>
-      <li>A. Sutar, A. Kulkarni, A. Jain, P. Jadhav, V. Gohokar, “Physics Informed Neural Networks Review”, ICCUBEA-2022</li>
-      <li>D. Barbole, P. Jadhav, “Grape Yield Prediction using Deep Learning Regression”, IEEE ICONAT, Goa, 2022</li>
-      <li>S. Begumpure, P. Jadhav, “Intelligent video analytics for human action detection”, IJCDS, 2022</li>
-      <li>... (continue full list neatly like this – ALL entries)</li>
-      <li>S.D. Oza, P.M. Jadhav, “Fast Block Matching Motion Estimation Algorithm”, IJECSCSE</li>
-    </ul>
+
+    <div class="pub-entry">D. Barbole, P.Jadhav, “GrapesNet: Indian RGB and RGB-D Vineyard Image Dataset for Deep Learning Applications”, Data In Brief, March 2023</div>
+    <div class="pub-entry">S. Muley, P. Jadhav, “AI for the Detection of Covid-19 Pneumonia on Chest X-Ray,” IEEE CICT-2022</div>
+    <div class="pub-entry">A. Sutar, A. Kulkarni, A. Jain, P. Jadhav, V. Gohokar, “Physics Informed Neural Networks – A Methodology Review“, ICCUBEA-2022</div>
+    <div class="pub-entry">D. Barbole, P. Jadhav, “Grape Yield Prediction using Deep Learning Regression Model”, IEEE ICONAT, 2022</div>
+    <div class="pub-entry">S. Begumpure, P. Jadhav, “Intelligent video analytics for human action detection: a deep learning approach”, IJCDS, 2022</div>
+    <!-- Add all other entries here in similar <div class="pub-entry">...</div> format -->
+    <div class="pub-entry">A. A. Bairagi, S. P. Newaskar, R. D. Shah, P. M. Jadhav, S. Kulkarni, “Fast Motion Estimation Algorithm”, Intl. Conf. on Information Science, Cancun, 2005</div>
 
     <h2>Patents</h2>
-    <ul>
-      <li>An Automated Grape Cluster Weight Prediction System Using Deep Learning, Status: Granted- 2022</li>
-      <li>A Multi-regression Grape Weight Prediction System and Methods, Status: Granted-2022</li>
-      <li>Low Power and Low Area Mash 2-2 Modulator for Portable Music Players, Status: Granted-2022</li>
-    </ul>
+    <div class="pub-entry">An Automated Grape Cluster Weight Prediction System Using Deep Learning, Status: Granted - 2022</div>
+    <div class="pub-entry">A Multi-regression Grape Weight Prediction System and Methods, Status: Granted - 2022</div>
+    <div class="pub-entry">Low Power and Low Area Mash 2-2 Modulator for Portable Music Players, Status: Granted - 2022</div>
 
     <h2>Research Team</h2>
-    <p>Details coming soon or provided as per university profile.</p>
+    <div class="pub-entry">Details coming soon or provided as per university profile.</div>
 
+    <div class="footer-note">
+      &copy; 2025 Dr. Parul Jadhav. All Rights Reserved.
+    </div>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    <h3>Contact</h3>
-    <p>Email: <a href="mailto:parul.jadhav@example.com">parul.jadhav@example.com</a></p>
-    <p>MIT World Peace University, Pune</p>
-    <p>
-      <a href="https://in.linkedin.com/in/dr-parul-jadhav-28b52b37" target="_blank">LinkedIn</a> |
-      <a href="https://scholar.google.com/citations?user=DObFL0IAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-      <a href="https://www.researchgate.net/profile/Parul-Jadhav" target="_blank">ResearchGate</a>
-    </p>
-    <p>&copy; 2025 Dr. Parul Jadhav. All Rights Reserved.</p>
-  </footer>
 
 </body>
 </html>
