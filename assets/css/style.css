@@ -13,30 +13,75 @@ a {
   color: inherit;
 }
 
-/* === Navbar === */
+/* === Navbar Revamp === */
 .navbar {
   background-color: #0C0931;
-  padding: 1rem;
-  text-align: center;
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
 }
-.navbar ul {
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.nav-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 2rem;
   margin: 0;
   padding: 0;
 }
-.navbar a {
+.nav-links a {
   color: white;
   font-weight: bold;
   transition: color 0.3s ease;
 }
-.navbar a:hover {
+.nav-links a:hover {
   color: #00CFE5;
+}
+
+/* === Hero Section Refined === */
+.hero {
+  min-height: 90vh; /* slightly shorter */
+  padding-top: 2rem; /* reduced top space */
+  background: linear-gradient(135deg,
+    #0C0931 0%,
+    #1D1856 25%,
+    #C200DB 50%,
+    #00CFE5 100%);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background-size: 300% 300%;
+  animation: gradient-shift 15s ease infinite;
+  gap: 4rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.hero-left img {
+  width: 340px; /* increased size */
+  height: 340px;
+  border-radius: 50%;
+  border: 6px solid #00CFE5;
+  object-fit: cover;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
 /* === Hero Section (Home + About) === */
