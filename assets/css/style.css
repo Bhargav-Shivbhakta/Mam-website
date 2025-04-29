@@ -268,4 +268,19 @@ footer a:hover {
   line-height: 1.6;
   color: #f1f1f1;
 }
+.orcid-line {
+  text-align: center;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+.orcid-line a {
+  color: #00cfe5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.orcid-line a:hover {
+  text-decoration: underline;
+}
 
