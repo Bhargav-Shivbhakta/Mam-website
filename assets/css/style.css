@@ -200,3 +200,94 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+
+/* Hero Fade Section */
+.about-hero-fade {
+  background: linear-gradient(135deg, #C200DB, #00CFE5);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  animation: gradient-shift 15s ease infinite;
+  transition: opacity 1s ease;
+}
+.about-hero-fade h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.about-hero-fade p {
+  font-size: 1.2rem;
+}
+.fade-out {
+  opacity: 0;
+}
+.hidden {
+  display: none;
+}
+
+/* About Content */
+.about-main-content {
+  padding: 2rem;
+}
+.about-section {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Timeline Education Section */
+.timeline-tech {
+  max-width: 900px;
+  margin: 3rem auto;
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline-tech h2 {
+  text-align: center;
+  color: #0C0931;
+  margin-bottom: 2rem;
+}
+.edu-line {
+  position: relative;
+  border-left: 3px solid #00CFE5;
+  padding-left: 1.5rem;
+}
+.edu-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #00CFE5;
+  border-radius: 50%;
+  margin-left: -22px;
+  position: relative;
+  top: 12px;
+}
+.edu-card {
+  background: linear-gradient(145deg, #f0faff, #e0f7ff);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+}
+.edu-card h3 {
+  margin-top: 0;
+  color: #0C0931;
+}
+.edu-card p, .edu-card li {
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #013849;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+}
+footer a {
+  color: #00CFE5;
+}
+footer h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
