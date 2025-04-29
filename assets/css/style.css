@@ -121,23 +121,20 @@ a {
 .about-hero-fade {
   background: linear-gradient(135deg, #C200DB, #00CFE5);
   color: white;
-  padding: 5rem 2rem;
-  text-align: center;
+  height: 100vh; /* Full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   animation: gradient-shift 15s ease infinite;
   transition: opacity 1s ease;
 }
 .about-hero-fade h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 .about-hero-fade p {
-  font-size: 1.2rem;
-}
-.fade-out {
-  opacity: 0;
-}
-.hidden {
-  display: none;
+  font-size: 1.3rem;
 }
 
 /* === About Section === */
