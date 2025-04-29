@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Dr. Parul Jadhav</title>
+  <title>About Dr. Parul Jadhav</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-title">Dr. Parul Jadhav</div>
@@ -24,37 +25,44 @@
     </div>
   </nav>
 
-  <!-- Hero Animation Section -->
+  <!-- Hero Fade Section -->
   <section id="heroFade">
     <h1>About Dr. Parul Jadhav</h1>
     <p>Educator. Researcher. Innovator.</p>
   </section>
 
-  <!-- Main Content -->
+  <!-- Main About Section (Initially Hidden) -->
   <main id="aboutMain" class="hidden">
     <section class="about-section">
       <p>
-        Dr. Parul Jadhav is an Associate Professor in the School of Electronics and Communication at MIT WPU. She has over <strong>29 years</strong> of experience in teaching, learning, research, and administration across diverse domains and technologies. Her areas of interest are in <strong>signal processing</strong>, <strong>video analytics</strong>, and <strong>Artificial Intelligence</strong>.
+        Dr. Parul Jadhav is an Associate Professor in the School of Electronics and Communication at MIT WPU. 
+        She has over <strong>29 years</strong> of experience in teaching, learning, research, and administration 
+        across diverse domains and technologies. Her areas of interest are in 
+        <strong>signal processing</strong>, <strong>video analytics</strong>, and 
+        <strong>Artificial Intelligence</strong>.
       </p>
     </section>
 
+    <!-- Education Timeline -->
     <section class="timeline-tech">
       <h2>Education</h2>
       <div class="edu-line">
         <div class="edu-dot"></div>
         <div class="edu-card">
-          <h3>2017 – Ph.D. (Electronics & Telecommunication)</h3>
+          <h3>2017 – Ph.D (Electronics & Telecommunication)</h3>
           <p>COEP (College Of Engineering Pune)</p>
           <ul>
             <li>30+ publications in national/international journals</li>
             <li>Research: Video Streaming, Compression, Signal Processing, ML</li>
           </ul>
         </div>
+
         <div class="edu-dot"></div>
         <div class="edu-card">
           <h3>1997 – M.E. (Electronics & Telecommunication)</h3>
           <p>COEP — First Class</p>
         </div>
+
         <div class="edu-dot"></div>
         <div class="edu-card">
           <h3>1992 – B.E. (Electronics & Telecommunication)</h3>
@@ -62,21 +70,21 @@
         </div>
       </div>
     </section>
-
-    <!-- Contact Section -->
-    <footer id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:parul.jadhav@example.com">parul.jadhav@example.com</a></p>
-      <p>MIT World Peace University, Pune</p>
-      <p>
-        <a href="https://in.linkedin.com/in/dr-parul-jadhav-28b52b37" target="_blank">LinkedIn</a> |
-        <a href="https://scholar.google.com/citations?user=DObFL0IAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-        <a href="https://www.researchgate.net/profile/Parul-Jadhav" target="_blank">ResearchGate</a>
-      </p>
-    </footer>
   </main>
 
-  <!-- Animation Script -->
+  <!-- Footer -->
+  <footer>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:parul.jadhav@example.com">parul.jadhav@example.com</a></p>
+    <p>MIT World Peace University, Pune</p>
+    <p>
+      <a href="https://in.linkedin.com/in/dr-parul-jadhav-28b52b37" target="_blank">LinkedIn</a> |
+      <a href="https://scholar.google.com/citations?user=DObFL0IAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+      <a href="https://www.researchgate.net/profile/Parul-Jadhav" target="_blank">ResearchGate</a>
+    </p>
+  </footer>
+
+  <!-- Script for Hero Animation -->
   <script>
     setTimeout(() => {
       document.getElementById("heroFade").classList.add("fade-out");
