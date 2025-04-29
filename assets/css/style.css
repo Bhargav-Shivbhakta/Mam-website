@@ -1,52 +1,57 @@
-
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Lato', sans-serif;
-  background-color: #EFE9DB; /* Child of Heaven */
-  color: #222;
+  background-color: #D6F0FA;
+  color: #013849;
 }
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-}
+
 .navbar {
-  background-color: #3F4C66; /* Quiet Peace */
-  padding: 1em;
+  background-color: #026891;
+  padding: 1rem;
   text-align: center;
 }
+
 .navbar ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
 }
+
 .navbar a {
-  color: #EFE9DB;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
-footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #3F4C66;
+
+.hero {
+  height: 80vh;
+  background: linear-gradient(to right, #026891, #00B4FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+  text-align: center;
+}
+
+.hero .overlay {
+  padding: 2rem;
+}
+
+.content {
+  padding: 2rem;
+  background-color: #A2E4FA;
+  text-align: center;
+}
+
+footer {
+  background-color: #013849;
+  color: white;
+  text-align: center;
+  padding: 1rem;
   position: fixed;
   width: 100%;
   bottom: 0;
-}
-
-/* Optional Section Backgrounds (lighter beige tones) */
-.section-summer-beige {
-  background-color: #D8BFAF;
-  padding: 2em;
-}
-.section-always-neutral {
-  background-color: #DDD5C7;
-  padding: 2em;
-}
-.section-turkish-tower {
-  background-color: #D8D7CD;
-  padding: 2em;
 }
