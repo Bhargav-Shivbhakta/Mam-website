@@ -54,8 +54,8 @@ a {
 
 /* === Hero Section Refined === */
 .hero {
-  min-height: 90vh; /* slightly shorter */
-  padding-top: 2rem; /* reduced top space */
+  height: auto;
+  min-height: 75vh;
   background: linear-gradient(135deg,
     #0C0931 0%,
     #1D1856 25%,
@@ -65,14 +65,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* 🔼 moves everything up */
   text-align: left;
   background-size: 300% 300%;
   animation: gradient-shift 15s ease infinite;
   gap: 4rem;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 3rem 5% 2rem; /* 🔽 top reduced from 5rem to 3rem */
 }
+
 
 .hero-left img {
   width: 340px; /* increased size */
