@@ -2,31 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Parul Jadhav | About</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Dr. Parul Jadhav</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
   <nav class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="media.html">Media</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Publications</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
-  <main>
-    <h1>About Page</h1>
-    <p>This is a placeholder for the About page content.</p>
-  </main>
+  <section class="about-hero">
+    <h1 data-aos="fade-up">About Dr. Parul Jadhav</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Educator. Researcher. Innovator.</p>
+  </section>
+
+  <section class="profile-card" data-aos="zoom-in">
+    <img src="assets/img/profile.jpg" alt="Dr. Parul Jadhav">
+    <div>
+      <h2>Dr. Parul Jadhav</h2>
+      <p>Head of Department, MIT-WPU</p>
+      <p>Dr. Jadhav is a leading academician with over 20 years of experience in research and education. She specializes in Artificial Intelligence, Smart Systems, and Data-Driven Innovation. Her work spans across academia, student mentoring, and institutional leadership.</p>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+    <h2 data-aos="fade-up">Career Timeline</h2>
+    <ul class="timeline">
+      <li data-aos="fade-right"><strong>2023–Present:</strong> HoD, MIT-WPU</li>
+      <li data-aos="fade-left"><strong>2017–2023:</strong> Associate Professor, MIT-WPU</li>
+      <li data-aos="fade-right"><strong>2012–2017:</strong> PhD in Artificial Intelligence</li>
+      <li data-aos="fade-left"><strong>2007–2012:</strong> Assistant Professor, VIT</li>
+    </ul>
+  </section>
 
   <footer>
     <p>&copy; 2025 Dr. Parul Jadhav. All Rights Reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
