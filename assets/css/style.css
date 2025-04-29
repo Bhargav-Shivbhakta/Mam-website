@@ -1,16 +1,16 @@
-/* Base font and background */
+/* Fonts and Base */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background-color: #D6F0FA; /* light blue */
-  color: #111111; /* dark charcoal */
+  background-color: #D6F0FA;
+  color: #111111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #0C0931; /* deep navy */
+  background-color: #0C0931;
   padding: 1rem;
   text-align: center;
 }
@@ -34,23 +34,46 @@ body {
 
 /* Hero Section */
 .hero {
-  height: 80vh;
-  background: linear-gradient(to bottom right, #0C0931, #E80074, #00CFE5);
+  height: 100vh;
+  background: linear-gradient(135deg,
+    #0C0931 0%,
+    #1D1856 25%,
+    #E80074 50%,
+    #C200DB 75%,
+    #00CFE5 100%);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-size: 300% 300%;
+  animation: gradient-shift 15s ease infinite;
   padding: 2rem;
 }
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+}
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
+
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
+
 .cta-btn {
   background-color: #E80074;
   color: white;
@@ -59,7 +82,7 @@ body {
   border-radius: 4px;
   font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .cta-btn:hover {
   background-color: #00CFE5;
