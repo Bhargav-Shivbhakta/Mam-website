@@ -283,4 +283,69 @@ footer a:hover {
 .orcid-line a:hover {
   text-decoration: underline;
 }
+.research-wrapper {
+  background: linear-gradient(to right, #300047, #c200db, #00cfe5);
+  padding: 5rem 2rem;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.research-theme, .research-project {
+  background-color: rgba(255,255,255,0.06);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.research-theme h2, .research-project h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.research-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Publications Cards */
+.papers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.paper-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  border-left: 5px solid #00cfe5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.paper-card h3 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.paper-card h3 a:hover {
+  color: #00cfe5;
+}
+
+.paper-card p {
+  margin-top: 0.5rem;
+  color: #e0e0e0;
+}
 
