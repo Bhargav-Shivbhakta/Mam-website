@@ -1,4 +1,123 @@
-/* Hero Fade Section */
+/* === Base === */
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #f2f8fc;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #0C0931;
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+}
+.nav-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #00CFE5;
+}
+
+/* === Hero Gradient Animation === */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Home Hero Section === */
+.hero {
+  height: auto;
+  min-height: 60vh;
+  background: linear-gradient(135deg, #0C0931, #1D1856, #C200DB, #00CFE5);
+  background-size: 300% 300%;
+  animation: gradient-shift 15s ease infinite;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 1rem 5% 2rem;
+  margin-top: 0;
+}
+.hero-left img {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 6px solid #00CFE5;
+  object-fit: cover;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+.hero-left img:hover {
+  transform: scale(1.05);
+}
+.hero-right {
+  flex: 2;
+  text-align: left;
+  color: white;
+}
+.hero-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-right h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #D6F0FA;
+}
+.hero-right p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.cta-btn {
+  background-color: #00CFE5;
+  color: #0C0931;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.cta-btn:hover {
+  background-color: #013849;
+  color: white;
+}
+
+/* === About Hero (Text Only) === */
 .about-hero-fade {
   background: linear-gradient(135deg, #C200DB, #00CFE5);
   color: white;
@@ -14,17 +133,14 @@
 .about-hero-fade p {
   font-size: 1.2rem;
 }
-
 .fade-out {
   opacity: 0;
 }
-
-/* Hidden until fade completes */
 .hidden {
   display: none;
 }
 
-/* About Section */
+/* === About Section === */
 .about-main-content {
   padding: 2rem;
 }
@@ -35,7 +151,7 @@
   line-height: 1.8;
 }
 
-/* Techy Timeline Style */
+/* === Timeline Tech Style === */
 .timeline-tech {
   max-width: 900px;
   margin: 3rem auto;
@@ -74,4 +190,13 @@
 }
 .edu-card p, .edu-card li {
   color: #333;
+}
+
+/* === Footer === */
+footer {
+  background-color: #013849;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
