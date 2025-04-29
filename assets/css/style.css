@@ -50,7 +50,7 @@ body {
   color: #00cfe5;
 }
 
-/* Hero Section */
+/* Hero Section (Home) */
 .hero {
   display: flex;
   flex-direction: row;
@@ -60,6 +60,7 @@ body {
   padding: 3rem 2rem;
   background: linear-gradient(to right, #300047, #c200db, #00cfe5);
   color: white;
+  width: 100%;
 }
 
 .hero-left img {
@@ -107,7 +108,7 @@ body {
   background-color: #00b5cf;
 }
 
-/* Hero Fade (About Page Intro) */
+/* Hero Fade (About Page Animation) */
 #heroFade {
   height: 100vh;
   width: 100%;
@@ -150,13 +151,15 @@ body {
   padding: 5rem 2rem;
   background: linear-gradient(to right, #300047, #c200db, #00cfe5);
   color: white;
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
+  text-align: center;
 }
 
 .about-section p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
+  max-width: 1000px;
+  margin: auto;
 }
 
 /* Education Timeline */
@@ -168,6 +171,8 @@ body {
 .timeline-tech h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #0b0b2c;
 }
 
 .edu-line {
