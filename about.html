@@ -9,26 +9,30 @@
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-title">Dr. Parul Jadhav</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="#">Publications</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects/Seminars</a></li>
+        <li><a href="#lectures">Expert Lecture</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section (text only) -->
+  <!-- Hero Text Section -->
   <section class="about-hero-fade" id="heroFade">
     <h1>About Dr. Parul Jadhav</h1>
     <p>Educator. Researcher. Innovator.</p>
   </section>
 
-  <!-- Main Content (Initially Hidden) -->
+  <!-- Main Content -->
   <main id="aboutMain" class="about-main-content hidden">
     <section class="about-section">
       <p>
@@ -47,7 +51,7 @@
           <p>COEP (College Of Engineering Pune)</p>
           <ul>
             <li>30+ publications in national/international journals</li>
-            <li>Research areas: Video Streaming, Compression, Signal Processing, ML</li>
+            <li>Research: Video Streaming, Compression, Signal Processing, ML</li>
           </ul>
         </div>
 
@@ -66,10 +70,15 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Dr. Parul Jadhav. All Rights Reserved.</p>
+  <!-- Contact Footer -->
+  <footer id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:parul.jadhav@example.com">parul.jadhav@example.com</a></p>
+    <p>MIT World Peace University, Pune</p>
+    <p>LinkedIn | Google Scholar | ResearchGate</p>
   </footer>
 
+  <!-- Script to fade out hero -->
   <script>
     setTimeout(() => {
       document.getElementById("heroFade").classList.add("fade-out");
@@ -79,5 +88,6 @@
       }, 1000);
     }, 5000);
   </script>
+
 </body>
 </html>
