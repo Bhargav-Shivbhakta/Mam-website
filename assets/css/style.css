@@ -1,4 +1,4 @@
-/* Fonts and Base */
+/* === Base === */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -8,11 +8,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Navbar */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Navbar === */
 .navbar {
   background-color: #0C0931;
   padding: 1rem;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .navbar ul {
   list-style: none;
@@ -24,7 +32,6 @@ body {
 }
 .navbar a {
   color: white;
-  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -32,14 +39,15 @@ body {
   color: #00CFE5;
 }
 
-/* Hero Section */
-.hero {
+/* === Hero Section (Home + About) === */
+.hero,
+.about-hero,
+.research-hero {
   height: 100vh;
   background: linear-gradient(135deg,
     #0C0931 0%,
     #1D1856 25%,
-    #E80074 50%,
-    #C200DB 75%,
+    #C200DB 50%,
     #00CFE5 100%);
   color: white;
   display: flex;
@@ -64,13 +72,17 @@ body {
   backdrop-filter: blur(6px);
 }
 
-.hero h1 {
-  font-size: 3rem;
+.hero h1,
+.about-hero h1,
+.research-hero h1 {
+  font-size: 2.8rem;
   margin-bottom: 0.5rem;
 }
-
-.hero p {
+.hero p,
+.about-hero p,
+.research-hero p {
   font-size: 1.2rem;
+  color: #f0f0f0;
   margin-bottom: 1.5rem;
 }
 
@@ -79,7 +91,7 @@ body {
   color: white;
   padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -89,47 +101,27 @@ body {
   color: #0C0931;
 }
 
-/* Content Section */
+/* === Main Content Section === */
 .content {
-  padding: 2rem;
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
+  min-height: 60vh;
+  text-align: center;
 }
 .intro {
-  background-color: #A2E4FA;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.08);
   max-width: 800px;
   margin: auto;
-  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
 }
 .intro h2 {
-  color: #1D1856;
+  color: #0C0931;
+  margin-bottom: 1rem;
 }
 
-/* Footer */
-footer {
-  background-color: #013849;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-.about-hero {
-  background: linear-gradient(to right, #0C0931, #00CFE5);
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.about-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-.about-hero p {
-  font-size: 1.2rem;
-  color: #f0f0f0;
-}
-
+/* === About Page: Profile Card === */
 .profile-card {
   max-width: 900px;
   margin: 3rem auto;
@@ -158,6 +150,7 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* === Timeline Section === */
 .timeline-section {
   max-width: 800px;
   margin: 2rem auto;
@@ -181,22 +174,7 @@ footer {
   font-weight: 500;
 }
 
-
-.research-hero {
-  background-color: #0C0931;
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.research-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-.research-hero p {
-  font-size: 1.1rem;
-  color: #D6F0FA;
-}
-
+/* === Research Page: Cards === */
 .research-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -205,7 +183,6 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
-
 .research-cards .card {
   background-color: white;
   border-left: 6px solid #00CFE5;
@@ -226,3 +203,11 @@ footer {
   color: #333;
 }
 
+/* === Footer === */
+footer {
+  background-color: #013849;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
