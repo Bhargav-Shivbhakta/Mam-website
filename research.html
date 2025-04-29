@@ -27,13 +27,13 @@
   </nav>
 
   <!-- Research Content -->
-  <section class="research-wrapper">
+  <section class="research-wrapper-light">
     <h1 class="section-title">Research Themes</h1>
     <p style="text-align:center; margin-bottom: 1rem;">
-      ORCID: <a href="https://orcid.org/0000-0002-5083-2900" target="_blank" style="color:#00cfe5;">https://orcid.org/0000-0002-5083-2900</a>
+      ORCID: <a href="https://orcid.org/0000-0002-5083-2900" target="_blank" style="color:#003845;">https://orcid.org/0000-0002-5083-2900</a>
     </p>
 
-    <!-- Theme: Video Compression -->
+    <!-- Video Compression -->
     <div class="research-theme">
       <h2>Video Compression Techniques</h2>
       <p>This research focuses on optimizing H.264 scalable video compression. It includes:</p>
@@ -44,27 +44,27 @@
       </ul>
     </div>
 
-    <!-- Theme: Video Analytics -->
+    <!-- Video Analytics -->
     <div class="research-theme">
       <h2>Video Analytics for Public Safety</h2>
       <img src="assets/img/Detection.avif" alt="Human Activity Detection" class="research-img" />
       <p>Focuses on human behavior analysis using CNN + LSTM to detect criminal activity with transfer learning for Indian crime scenarios.</p>
     </div>
 
-    <!-- Theme: Signal Processing -->
+    <!-- Signal Processing -->
     <div class="research-theme">
       <h2>Signal Processing & Image Reconstruction</h2>
       <p>Using entropy-based decoding of coded-mask images from photon data captured in space, improving astrophysics image clarity via entropy maximization.</p>
     </div>
 
-    <!-- Theme: LiDAR Technology -->
+    <!-- LiDAR Technology -->
     <div class="research-theme">
       <h2>LiDAR + Sensor Fusion</h2>
       <img src="assets/img/11.avif" alt="LiDAR Object Detection" class="research-img" />
       <p>Uses LiDAR and camera fusion in Carla simulator for object detection and 3D localization in self-driving vehicle environments.</p>
     </div>
 
-    <!-- Funded Projects Section -->
+    <!-- Funded Projects -->
     <h1 class="section-title">Funded Research Projects</h1>
 
     <div class="research-project">
@@ -77,12 +77,6 @@
       <h3>Optimized Video Compression for Real-Time Applications</h3>
       <img src="assets/img/video-1.avif" class="research-img" alt="Video Compression" />
       <p>Developed scalable video coding algorithms for dynamic bandwidth environments to support real-time adaptive streaming.</p>
-    </div>
-
-    <!-- Latest Publications -->
-    <h1 class="section-title">Latest Publications</h1>
-    <div id="papers-container" class="papers-container">
-      <!-- Papers loaded dynamically from JSON -->
     </div>
   </section>
 
@@ -97,25 +91,6 @@
       <a href="https://www.researchgate.net/profile/Parul-Jadhav" target="_blank">ResearchGate</a>
     </p>
   </footer>
-
-  <!-- Script to load papers -->
-  <script>
-    fetch('assets/data/papers.json')
-      .then(response => response.json())
-      .then(papers => {
-        const container = document.getElementById('papers-container');
-        papers.slice(0, 10).forEach(paper => {
-          const paperDiv = document.createElement('div');
-          paperDiv.className = 'paper-card';
-          paperDiv.innerHTML = `
-            <h3><a href="${paper.link}" target="_blank">${paper.title}</a></h3>
-            <p>Year: ${paper.year}</p>
-          `;
-          container.appendChild(paperDiv);
-        });
-      })
-      .catch(err => console.error("Error loading papers:", err));
-  </script>
 
 </body>
 </html>
