@@ -4,6 +4,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(-45deg, #300047, #c200db, #00cfe5, #300047);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  color: white;
+}
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
 body {
   font-family: 'Lato', sans-serif;
