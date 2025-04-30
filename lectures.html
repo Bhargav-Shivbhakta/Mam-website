@@ -2,76 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expert Lectures – Dr. Parul Jadhav</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expert Lecture | Dr. Parul Jadhav</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
   <style>
     body {
-      font-family: 'Lato', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #300047, #c200db, #00cfe5);
-      color: white;
+      font-family: 'Lato', sans-serif;
+      background-color: #000;
     }
 
     .navbar {
       background-color: #0b0b2c;
       padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .nav-title {
+    .navbar .nav-title {
+      color: white;
       font-size: 1.4rem;
       font-weight: bold;
-      color: white;
     }
 
-    .nav-links {
+    .navbar .nav-links {
       list-style: none;
       display: flex;
       gap: 1.5rem;
     }
 
-    .nav-links li a {
+    .navbar .nav-links li a {
       text-decoration: none;
       color: white;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
-    .nav-links li a:hover {
+    .navbar .nav-links li a:hover {
       color: #00cfe5;
     }
 
-    .section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 4rem 2rem;
+    .video-container {
+      width: 100%;
+      height: calc(100vh - 80px); /* adjusts for navbar height */
     }
 
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    ul {
-      list-style: disc;
-      padding-left: 2rem;
-    }
-
-    li {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    footer {
-      background-color: #003845;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 4rem;
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -84,25 +68,19 @@
       <li><a href="achievements.html">Achievements</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="publications.html">Publications</a></li>
-      <li><a href="projects.html">Projects/Seminars</a></li>
-      <li><a href="lectures.html">Expert Lecture</a></li>
+      <li><a href="projects-seminars.html">Projects/Seminars</a></li>
+      <li><a href="expert-lecture.html">Expert Lecture</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <div class="section">
-    <h1>Expert Lectures</h1>
-    <ul>
-      <li><strong>Keynote Speaker</strong> – National Conference on Advances in AI (2022)</li>
-      <li><strong>Panelist</strong> – Industry 4.0 Innovations Forum (2021)</li>
-      <li><strong>Guest Lecture</strong> – Embedded Systems in Signal Processing, MIT-WPU</li>
-      <li><strong>Session Chair</strong> – IEEE Conference on AI & Applications</li>
-      <li><strong>Invited Speaker</strong> – Workshop on Deep Learning for Public Safety (2023)</li>
-    </ul>
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/hrJUMCI6WX0?rel=0&vq=hd1080" 
+      title="Expert Lecture by Dr. Parul Jadhav"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
   </div>
-
-  <footer>
-    <p>&copy; 2025 Dr. Parul Jadhav. All Rights Reserved.</p>
-  </footer>
 </body>
 </html>
